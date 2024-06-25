@@ -12,11 +12,16 @@ public class AsteroideDestruccion : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
-    void OnDestroy()
+
+    private void OnCollisionEnter(Collision collision)
     {
-
-        Instantiate(efectoDestruccion, transform.position, Quaternion.identity);
-
-        gameManager.SumarPuntos(puntosPorDestruir);
+        if (collision.gameObject.CompareTag("Proyectil"))
+        {
+            
+            Instantiate(efectoDestruccion, transform.position, Quaternion.identity);
+            gameManager.SumarPuntos(puntosPorDestruir);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

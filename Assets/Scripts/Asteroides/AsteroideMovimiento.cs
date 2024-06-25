@@ -11,13 +11,6 @@ public class AsteroideMovimiento : MonoBehaviour
         transform.Translate(Vector3.back * velocidad * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Proyectil"))
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-    }
+
 
 }
