@@ -4,18 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Asteroide
-  - Proyectil
+  - floor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - Floor
   - Water
   - UI
-  - Asteroide
-  - 
+  - Player
+  - Interact
   - 
   - 
   - 
